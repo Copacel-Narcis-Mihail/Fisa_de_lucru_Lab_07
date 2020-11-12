@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function change()
+{
+document.getElementById("header").innerHTML= "Inginer dezvoltare software Copăcel Narcis-Mihail";
+document.getElementById("myImage").src="Narcis2.jpg";
+var tabelEducatie=document.getElementById("TabEducatie");
+tabelEducatie.rows[0].cells[0].innerHTML="Univ Tehnică";
+tabelEducatie.rows[0].cells[2].innerHTML="Lucrul în echipă";
+tabelEducatie.rows[1].cells[0].innerHTML="XYZ";
+tabelEducatie.rows[1].cells[2].innerHTML="Public speaking";
+
+document.body.style.background="DarkGrey";
+var par=document.getElementByTagName("p");
+var i;
+for(i0;i<=par,length;i++)
+{par[i].style.color="black";
+}
+document.getElementById("myImage").style.opacity="0.9";
+document.getElementById("myImage").style.border="6px";
+
+
+
+}
+function arataVarsta()
+{
+var azi= new Date;
+var VarstaMea;
+
+var anNasc = document.getElementById("varsta").innerHTML;
+var anCurent=azi.getFullYear();
+VarstaMea=anCurent - parseInt(anNasc);
+document.getElementById("varsta").innerHTML= VarstaMea;
+}
+function emailV()
+{var i;
+var ok=0;
+var str = document.getElementById("email").innerHTML;
+var len=str.length
+for(i=0; i<=len;i++)
+{
+if(str[i]=='@')
+ok=1;}
+if(ok==1)
+document.getElementById("validare").innerHTML="Adresă de mail validă.";
+else
+document.getElementById("validare").innerHTML="Adresă de mail invalidă.";
+
+
+}
+</script>
+<style>
+h1 {
+	color: MediumSeaGreen;
+}
+body {
+	background-color: Gainsboro;
+	color: SlateBlue;
+margin-left: 30px;
+font-family: Arial, Helvetica, sans-serif;
+}
+ 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center-left;
+  border-bottom: 1px solid #ddf;
+}
+
+tr:hover {background-color:#F0FFFF;}
+	img{
+		border-radius: 8px;
+		opacity: 0.8;
+		text-align: center;
+  	}
+	
+	
+	ul {
+		
+		padding: 20px;
+	}
+  
+	li:hover {background: #F0FFFF;}
+	
+</style>
+</head>
+<body>
+
+<h1>Fișă de lucru</h1>
+<p id="header">Nume: Copăcel Narcis-Mihail</p>
+<p id="email">narciscopacel@gmail.com</p>
+<p onmouseover="emailV()" id="validare">Validare adresă de email</p>
+<img src="Narcis 1.png" id="myImage">
+<p onmouseover="arataVarsta()" id="varsta">2001</p>
+<p> Un citat reprezentativ pentru așteptările mele legate de educație:</p>
+<p id="citat"><cite> "Educaţia nu este cât de mult ai memorat sau cât ştii. Este capacitatea de a face diferenţa între ce ştii şi ce nu ştii – Anatole France</cite>.</p>
+<hr>
+<p> Liste de discipline pe care doresc să le aprofundez:<br>
+<table id="TabEducatie">
+<tr>
+<th>Disciplina</th>
+<th>Perdioada de studiu</th>
+<th>Link către fișa disciplinei</th>
+</tr>
+<tr>
+<th>Programarea calculatoarelor-Limbaje</th>
+<th>Semestrul 1</th>
+<th> <a href="url">https://etti.utcluj.ro/files/FiseDisciplina/EaRo/04.pdf</a>
+</tr>
+<tr>
+<th>Informatică aplicată</th>
+<th>Semestrul 1</th>
+<th><a href="url">https://etti.utcluj.ro/files/FiseDisciplina/EaRo/06.pdf</a></th>
+</tr>
+<tr>
+<th>Dispozitive electronice</th>
+<th>Semestrul 2</th>
+<th><a href="url">https://etti.utcluj.ro/files/FiseDisciplina/EaRo/12.pdf</a></th>
+</tr>
+</table>
+<hr>
+<p>Hobby-uri:</>
+<ul>
+<li>Jocurile video</li>
+<li>Să înot</li>
+<li>Să citesc</li>
+<br>
+<a href="Catalog colegi.html">Înapoi</a>
+<button onclick="change()">Alta viata</button>
+</body>
+</html>
